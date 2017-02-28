@@ -1,0 +1,323 @@
+@-moz-keyframes rippleanim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scale(1);
+  }
+}
+@-webkit-keyframes rippleanim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scale(1);
+  }
+}
+@-o-keyframes rippleanim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scale(1);
+  }
+}
+@keyframes rippleanim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scale(1);
+  }
+}
+@-moz-keyframes animicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes animicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+html {
+  font-family: sans-serif;
+  background: #333;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+h1 {
+  color: #f9690e;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 30px;
+}
+#bg {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  transition: background 0.4s ease;
+  opacity: 0.3;
+  z-index: -10;
+}
+#bulb {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -150px;
+  top: 230px;
+  cursor: pointer;
+}
+#bulb>svg {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#bulb>#light-ray {
+  fill: transparent !important;
+}
+#bulb>#light-glass {
+  fill: #ccc !important;
+  filter: none;
+}
+#bulb>#light-base {
+  fill: #999 !important;
+}
+#bulb.on>#light-ray,
+#bulb.on>#light-glass {
+  fill: #f4d03f !important;
+  filter: drop-shadow(0 0 10px #f4d03f);
+}
+#bulb.on>#light-base {
+  fill: #bbb !important;
+}
+#bulb.on~#bg {
+  background: #f4d03f;
+}
+#down {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transform: none;
+  transition: transform 0.4s ease;
+  z-index: 100000;
+}
+#down>svg {
+  position: absolute;
+  display: block;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+#down svg[file="cross.svg"] {
+  transform: scale(0.1);
+  opacity: 0;
+}
+#down svg[file="gear.svg"] {
+  transform: scale(1);
+  opacity: 1;
+}
+form {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #424242;
+  z-index: 90;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+form>p {
+  width: 90%;
+  height: 26px;
+  border: none;
+  margin: 0 5%;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  overflow: visible;
+  min-width: 200px;
+}
+form>p:first-child {
+  margin-top: 60px;
+}
+form>input {
+  width: 90%;
+  height: 26px;
+  border: none;
+  margin: 10px 5%;
+  padding: 3px 0;
+  text-indent: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 200px;
+}
+#bar {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background: #f9690e;
+  color: #fff;
+  z-index: 99999;
+}
+#bar>div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#bar .text {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 55px;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+}
+#bar .main-bar {
+  top: 0;
+  left: 0;
+}
+#bar .setting-bar {
+  top: 0;
+  left: 101%;
+}
+#bar svg {
+  position: absolute;
+  display: block;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+#chek {
+  display: none;
+  appearance: none;
+}
+#chek:checked~#down {
+  transform: rotateZ(180deg);
+}
+#chek:checked~#down svg[file="gear.svg"] {
+  transform: scale(0.1);
+  opacity: 0;
+}
+#chek:checked~#down svg[file="cross.svg"] {
+  transform: scale(1);
+  opacity: 1;
+}
+#chek:checked~form {
+  width: 100%;
+  height: 100%;
+}
+#chek:checked~#bar .main-bar {
+  top: 0;
+  left: -101%;
+}
+#chek:checked~#bar .setting-bar {
+  top: 0;
+  left: 0;
+}
