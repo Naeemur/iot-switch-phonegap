@@ -21,7 +21,7 @@
     <preference name="disallowOverscroll" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="prerendered-icon" value="false" />
-    <preference name="android-minSdkVersion" value="12" />
+    <preference name="android-minSdkVersion" value="18" />
     <preference name="android-installLocation" value="auto" />
     <preference name="BackgroundColor" value="0xffffffff "/>
     <preference name="KeepRunning" value="true"/>
